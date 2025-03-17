@@ -70,6 +70,7 @@ PHANSO TimMax (PHANSO ps1, PHANSO ps2) //Rút gọn 2 phân số trước khi sa
 }
 
 void Xuat (PHANSO ps) //Rút gọn phân số trước khi xuất, xuất ra phân số theo đúng định dạng
+{
     RutGon(ps);
     if (ps.mau<-1){
         cout<<-ps.tu<<"/"<<-ps.mau;
