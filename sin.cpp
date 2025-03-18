@@ -5,7 +5,8 @@
 using namespace std;
 #define eps 1e-5 //Định nghĩa độ chính xác của phép tính
 
-double tinh (double x) //Dùng để tính sin(x) sử dụng khai triển chuỗi Taylor, sử dụng vòng lặp để tính số hạng tiếp theo rồi cộng dồn vào tổng, i tăng lên 2 khi vòng lặp kết thúc.
+double tinh (double x) //Input: x. Output: kết quả của sin(x)
+//Dùng để tính sin(x) sử dụng khai triển chuỗi Taylor, sử dụng vòng lặp để tính số hạng tiếp theo rồi cộng dồn vào tổng, i tăng lên 2 khi vòng lặp kết thúc.
 //Khi giá trị tuyệt đối của số hạng nhỏ hơn eps thì dừng vòng lặp
 //Hàm trả về giá trị sin(x)
 {
