@@ -15,7 +15,8 @@ struct MANGHOCSINH //struct MANGHOCSINH để lưu danh sách n học sinh
     int n;
 };
 
-bool chu (string s) //Hàm kiểm tra tính hợp lệ của họ tên
+bool chu (string s) //Input: họ tên hs. Output: true/falsefalse
+//Hàm kiểm tra tính hợp lệ của họ tên
 //Học tên phải từ 5-50 kí tự, chỉ chứa chữ cái và dấu cách, không có số hoặc kí tự đặc biệt
 {
     if (s.length()<5 || s.length()>50) return false;
@@ -61,7 +62,8 @@ void Nhap (MANGHOCSINH &mhs) //Nhập số n học sinh
     }
 }
 
-string xeploai (double tb) //Dùng cấu trúc rẽ nhánh để xếp loại học lực cho học sinh dựa trên điểm trung bình
+string xeploai (double tb) //Input: Điểm trung bình. Output: xếp loại học sinhsinh
+//Dùng cấu trúc rẽ nhánh để xếp loại học lực cho học sinh dựa trên điểm trung bình
 {
     if (tb>=9) return "Xuat sac";
     else if (tb>=8) return "Gioi";
@@ -85,7 +87,8 @@ void Xuat (MANGHOCSINH mhs) //Xuất danh sách tất cả học sinh
     cout<<endl;
 }
 
-void FindMax (MANGHOCSINH mhs) //Tìm học sinh có điểm trung bình lớn nhất bằng vòng lặp for
+void FindMax (MANGHOCSINH mhs) //Input: mảng học sinh. Output: học sinh có điểm trung bình cao nhất
+//Tìm học sinh có điểm trung bình lớn nhất bằng vòng lặp for
 //Gán max là hs ở vị trí 0, chạy vòng lặp để tìm max tới vị trí cuối cùng
 {
     double max=mhs.hs[0].tb;
@@ -101,14 +104,16 @@ void FindMax (MANGHOCSINH mhs) //Tìm học sinh có điểm trung bình lớn n
         }
     }
 }
-void thuong (string &s) //Hàm để đưa tên học sinh về chữ thường để tìm kiếm
+void thuong (string &s) //Input: họ tên hs. Output: họ tên hs đã được viết thườngthường
+//Hàm để đưa tên học sinh về chữ thường để tìm kiếm
 {
     for (char &c : s){
         c=tolower(c);
     }
 }
 
-void Findsv (MANGHOCSINH mhs) //Hàm tìm học sinh theo tên
+void Findsv (MANGHOCSINH mhs) //Input: họ tên hs cần tìm. Output: thông tin hs cần tìm
+//Hàm tìm học sinh theo tên
 {
     cin.ignore();
     string tim;
@@ -130,7 +135,8 @@ void Findsv (MANGHOCSINH mhs) //Hàm tìm học sinh theo tên
     }
 }
 
-void Toan (MANGHOCSINH mhs) //Hàm tìm kiếm học sinh có điểm toán thấp nhất dùng vòng lặp for
+void Toan (MANGHOCSINH mhs) //Input: Mảng học sinh. Output: Học sinh có điểm toán cao nhất
+//Hàm tìm kiếm học sinh có điểm toán thấp nhất dùng vòng lặp for
 //Khởi tạo min là học sinh thứ 0, chạy đến cuối vòng lặp để tìm và xuất min
 {
     double min=mhs.hs[0].toan;
