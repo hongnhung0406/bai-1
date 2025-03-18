@@ -1,12 +1,14 @@
 #include <iostream>
 using namespace std;
 
-bool nhuan (int nam) //Kiểm tra có phải năm nhuận hay không
+bool nhuan (int nam) //Input: năm được nhập vào. Output: true/false
+//Kiểm tra có phải năm nhuận hay không
 {
     return (nam%4==0 && nam%100!=0) || (nam%400==0);
 }
 
-void ketiep (int ngay, int thang, int nam) //Tính ngày kế tiếp bằng cách tăng ngày lên 1
+void ketiep (int ngay, int thang, int nam) //Input: ngày, tháng, năm. Output: ngày kế tiếp của ngày, tháng, năm đó
+//Tính ngày kế tiếp bằng cách tăng ngày lên 1
 //Nếu là ngày 31/12 thì chuyển sang ngày 1/1 năm tiếp theo
 //Nếu là ngày cuối cùng của tháng thì xuất ngày 1 của tháng tiếp theo
 {
@@ -30,7 +32,8 @@ void ketiep (int ngay, int thang, int nam) //Tính ngày kế tiếp bằng các
     cout<<"Ngay ke tiep la: "<<ngay<<"/"<<thang<<"/"<<nam<<endl;
 }
 
-void ngaytruoc (int ngay, int thang, int nam) //Tìm ngày trước đó của ngày nhập vào bằng cách giảm ngày đi 1
+void ngaytruoc (int ngay, int thang, int nam) //Input: ngày, tháng, năm. Output: ngày trước đó của ngày, tháng, năm đó
+//Tìm ngày trước đó của ngày nhập vào bằng cách giảm ngày đi 1
 //Nếu là ngày 1/1 thì chuyển về ngày 31/12 năm trước đó
 //Nếu là ngày đầu tiên của tháng thì chuyển sang ngày cuối cùng của tháng trước
 {
@@ -55,7 +58,8 @@ void ngaytruoc (int ngay, int thang, int nam) //Tìm ngày trước đó của n
     cout<<"Ngay truoc do la: "<<ngay<<"/"<<thang<<"/"<<nam<<endl;
 }
 
-void baonhieu (int ngay, int thang, int nam) //Tính xem ngày nhập vào là ngày thứ bao nhiêu trong năm bằng vòng lặp, cộng ngày đã cho với tổng số ngày của các tháng trước
+void baonhieu (int ngay, int thang, int nam) ////Input: ngày, tháng, năm. Output: ngày đó là ngày thứ bao nhiêu trong năm
+//Tính xem ngày nhập vào là ngày thứ bao nhiêu trong năm bằng vòng lặp, cộng ngày đã cho với tổng số ngày của các tháng trước
 {
     int tinh [12]={31,28,31,30,31,30,31,31,30,31,30,31};
     if (nhuan(nam)){
