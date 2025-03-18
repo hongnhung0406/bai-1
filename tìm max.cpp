@@ -43,6 +43,7 @@ void Nhap (PHANSO &ps) //Nhâp tử số và mẫu số, nếu nhập sai yêu c
 }
 
 void RutGon (PHANSO &ps) //Tìm UCLN của tử và mẫu, sau đó chia cả hai để rút gọn phân số
+//Input: phân số chưa được rút gọn. //Output: phân số đã được rút gọn
 {
     int ucln=TimUCLN(ps.tu,ps.mau);
     if (ucln>0){
@@ -52,6 +53,7 @@ void RutGon (PHANSO &ps) //Tìm UCLN của tử và mẫu, sau đó chia cả ha
 }
 
 PHANSO TimMax (PHANSO ps1, PHANSO ps2) //Rút gọn 2 phân số trước khi sao sánh, thực hiện nhân chéo tử và mẫu để xác định phân số lớn hơn, sau đó xuất ra phân số lớn nhất, nếu 2 phân số bằng nhau thì xuất phân số thứ nhất
+//Input: 2 phân số được nhập vào. Output: Phân số lớn nhất
 {
     RutGon(ps1);
     RutGon(ps2);
