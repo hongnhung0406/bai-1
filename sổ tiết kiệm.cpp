@@ -88,7 +88,7 @@ void Nhap (TIETKIEM &tk) //Hàm nhập thông tin của một sổ tiết kiệm
 
     cin.ignore();
     do {
-        cout<<"Nhap loai tiet dai toi da 10 ki tu (ngan han, dai han): ";
+        cout<<"Nhap loai tiet kiem dai toi da 10 ki tu (ngan han, dai han): ";
         getline(cin,tk.loai);
     } while(!ktloai(tk.loai));
 
