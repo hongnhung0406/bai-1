@@ -42,7 +42,7 @@ void Nhap (PHANSO &ps) //Nhâp tử số và mẫu số, nếu nhập sai yêu c
     } while (ps.mau==0);
 }
 
-void RutGon (PHANSO &ps) //Tìm UCLN của tử và mẫu, sau đó chia cả hai để rút gọn phân số
+void RutGon (PHANSO &ps) //Tìm UCLN của tử và mẫu, sau đó chia cả hai để rút gọn phân số //Input: phân số chưa được rút gọn. //Output: phân số đã được rút gọn
 {
     int ucln=TimUCLN(ps.tu,ps.mau);
     if (ucln>0){
@@ -51,7 +51,8 @@ void RutGon (PHANSO &ps) //Tìm UCLN của tử và mẫu, sau đó chia cả ha
     }
 }
 
-PHANSO cong (PHANSO ps1, PHANSO ps2) //Thực hiện cộng 2 phân số: a/b + c/d = (a*d + c*b)/(b*d)
+PHANSO cong (PHANSO ps1, PHANSO ps2) //Thực hiện cộng 2 phân số: a/b + c/d = (a*d + c*b)/(b*d) 
+//Input: 2 phân số được nhập vào. Output: tổng của 2 phân số
 {
     PHANSO pstong;
     pstong.tu= (ps1.tu * ps2.mau) + (ps2.tu * ps1.mau);
@@ -59,23 +60,7 @@ PHANSO cong (PHANSO ps1, PHANSO ps2) //Thực hiện cộng 2 phân số: a/b + 
     return pstong;
 }
 
-PHANSO tru (PHANSO ps1, PHANSO ps2) //Thực hiện trừ 2 phân số: a/b - c/d = (a*d - c*b)/(b*d)
-{
-    PHANSO pshieu;
-    pshieu.tu= (ps1.tu *ps2.mau) - (ps2.tu * ps1.mau);
-    pshieu.mau=ps1.mau * ps2.mau;
-    return pshieu;
-}
-
-PHANSO nhan (PHANSO ps1, PHANSO ps2) //Thực hiện nhân 2 phân số: a/b * c/d = (a*c)/(b*d)
-{
-    PHANSO pstich;
-    pstich.tu=ps1.tu * ps2.tu;
-    pstich.mau=ps1.mau * ps2.mau;
-    return pstich;
-}
-
-PHANSO chia (PHANSO ps1, PHANSO ps2) //Thực hiện chia 2 phân số: a/b : c/d = (a*d)/(b*c)
+PHANSO tru (PHANSO ps1, PHANSO ps2) //Thực hiện trừ 2 phân số: a/bthương của 2 phân số
 {
     PHANSO psthuong;
     psthuong.tu=ps1.tu * ps2.mau;
