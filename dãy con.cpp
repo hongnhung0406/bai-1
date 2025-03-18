@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void lientuc (int a[], int b[], int x, int y) //Dùng vòng lặp for để tìm vị trí xuất hiện của dãy A trong dãy B từ i=0 đến i=y-x
+void lientuc (int a[], int b[], int x, int y) //Input: mảng A và B. Output: vị trí xuất hiện của A trong B và số lần xuất hiện
+//Dùng vòng lặp for để tìm vị trí xuất hiện của dãy A trong dãy B từ i=0 đến i=y-x
 //Mỗi lần A xuất hiện biến đếm được tăng 1
 //Nếu đếm > 0 thì xuất số lần xuất hiện của A và vị trí xuất hiện, nếu đếm=0 thì xuất không tìm thấy
 {
