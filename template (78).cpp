@@ -42,7 +42,8 @@ void Nhap (PHANSO &ps) //Nhâp tử số và mẫu số, nếu mẫu bằng 0 th
     } while (ps.mau==0);
 }
 
-void RutGon (PHANSO &ps)//Chia tử và mẫu cho UCLN đã tìm được để rút gọn phân số
+void RutGon (PHANSO &ps) //Input: phân số chưa được rút gọn. //Output: phân số đã được rút gọn
+//Chia tử và mẫu cho UCLN đã tìm được để rút gọn phân số
 {
     int ucln=TimUCLN(ps.tu,ps.mau);
     if (ucln>0){
